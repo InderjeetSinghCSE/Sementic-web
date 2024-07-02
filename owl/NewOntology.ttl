@@ -1,0 +1,186 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://visualdataweb.org/newOntology/> .
+
+<http://visualdataweb.org/newOntology/> rdf:type owl:Ontology ;
+                                        dc:title "New ontology"@en; 
+                                        dc:description "New ontology description"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 20 ###
+#  --------------------------- Property 0------------------------- 
+:PRIMARY_DOCTOR rdf:type owl:ObjectProperty ;
+                rdfs:label "PRIMARY DOCTOR"@en; 
+                rdfs:domain :PATIENT_123;
+                rdfs:range :DOC_456 . 
+#  --------------------------- Property 1------------------------- 
+:TYPE rdf:type owl:ObjectProperty ;
+      rdfs:label "TYPE"@en; 
+      rdfs:domain :PATIENT_123;
+      rdfs:range :PATIENT . 
+#  --------------------------- Property 2------------------------- 
+:NAME rdf:type owl:ObjectProperty ;
+      rdfs:label "NAME"@en; 
+      rdfs:domain :PATIENT_123;
+      rdfs:range :JHON . 
+#  --------------------------- Property 3------------------------- 
+:MEDICAL_RECORD rdf:type owl:ObjectProperty ;
+                rdfs:label "Has MEDICAL RECORD"@en; 
+                rdfs:domain :PATIENT_123;
+                rdfs:range :MEDICAL_ . 
+#  --------------------------- Property 4------------------------- 
+:TITLE rdf:type owl:ObjectProperty ;
+       rdfs:label "TITLE"@en; 
+       rdfs:domain :TREATMENT_789;
+       rdfs:range :BLOOD_PRESSSURE_MANAGEMENT . 
+#  --------------------------- Property 5------------------------- 
+:DESCRIPTION rdf:type owl:ObjectProperty ;
+             rdfs:label "DESCRIPTION"@en; 
+             rdfs:domain :TREATMENT_789;
+             rdfs:range :PRESCRIBED_MEDICATIONS_AND_LIFE_STYLE_CHANGES_ . 
+#  --------------------------- Property 6------------------------- 
+:TYPE rdf:type owl:ObjectProperty ;
+      rdfs:label "TYPE"@en; 
+      rdfs:domain :DOC_456;
+      rdfs:range :DOCTOR . 
+#  --------------------------- Property 7------------------------- 
+:NAME rdf:type owl:ObjectProperty ;
+      rdfs:label "NAME"@en; 
+      rdfs:domain :DOC_456;
+      rdfs:range :DR._SMITH . 
+#  --------------------------- Property 8------------------------- 
+:WORKS_AT rdf:type owl:ObjectProperty ;
+          rdfs:label "WORKS AT"@en; 
+          rdfs:domain :DOC_456;
+          rdfs:range :HOSPITAL_XYZ . 
+#  --------------------------- Property 9------------------------- 
+:TYPE_ rdf:type owl:ObjectProperty ;
+       rdfs:label "TYPE "@en; 
+       rdfs:domain :HOSPITAL_XYZ;
+       rdfs:range :HOSPITAL . 
+#  --------------------------- Property 10------------------------- 
+:NAME rdf:type owl:ObjectProperty ;
+      rdfs:label "NAME"@en; 
+      rdfs:domain :HOSPITAL_XYZ;
+      rdfs:range : . 
+#  --------------------------- Property 11------------------------- 
+:CITY rdf:type owl:ObjectProperty ;
+      rdfs:label "LOCATION"@en; 
+      rdfs:domain :HOSPITAL_XYZ;
+      rdfs:range :"CITY_,_COUNTRY" . 
+#  --------------------------- Property 12------------------------- 
+:HAS_INSURANCE_ rdf:type owl:ObjectProperty ;
+                rdfs:label "HAS INSURANCE "@en; 
+                rdfs:domain :PATIENT_123;
+                rdfs:range :INSURANCE_COMPANY_ABC . 
+#  --------------------------- Property 13------------------------- 
+:TYPE rdf:type owl:ObjectProperty ;
+      rdfs:label "TYPE"@en; 
+      rdfs:domain :INSURANCE_COMPANY_ABC;
+      rdfs:range :INSURANCE_COMPANY . 
+#  --------------------------- Property 14------------------------- 
+:NAME rdf:type owl:ObjectProperty ;
+      rdfs:label "NAME"@en; 
+      rdfs:domain :INSURANCE_COMPANY_ABC;
+      rdfs:range :"HEALTH_INSUTE_LTD." . 
+#  --------------------------- Property 15------------------------- 
+:COVERAGE_TYPE rdf:type owl:ObjectProperty ;
+               rdfs:label "COVERAGE TYPE"@en; 
+               rdfs:domain :INSURANCE_COMPANY_ABC;
+               rdfs:range :COMPREHENSIVE . 
+#  --------------------------- Property 16------------------------- 
+:PATIENT_CONDITION rdf:type owl:ObjectProperty ;
+                   rdfs:label "PATIENT CONDITION"@en; 
+                   rdfs:domain :MEDICAL_;
+                   rdfs:range :HYPERTENTION . 
+#  --------------------------- Property 17------------------------- 
+:HAS_TREATMENT rdf:type owl:ObjectProperty ;
+               rdfs:label "HAS TREATMENT"@en; 
+               rdfs:domain :MEDICAL_;
+               rdfs:range :TREATMENT_789 . 
+#  --------------------------- Property 18------------------------- 
+:TYPE rdf:type owl:ObjectProperty ;
+      rdfs:label "TYPE"@en; 
+      rdfs:domain :MEDICAL_;
+      rdfs:range :MEDICAL_RECORD . 
+#  --------------------------- Property 19------------------------- 
+:TYPE rdf:type owl:ObjectProperty ;
+      rdfs:label "TYPE"@en; 
+      rdfs:domain :TREATMENT_789;
+      rdfs:range :TREATMENT . 
+###  Class Definitions (Number of Classes) 21 ###
+#  --------------------------- Class  0------------------------- 
+:DOC_456 rdf:type owl:Class; 
+         rdfs:label "DOC 456"@en . 
+#  --------------------------- Class  1------------------------- 
+:PATIENT_123 rdf:type owl:Class; 
+             rdfs:label "PATIENT 123"@en . 
+#  --------------------------- Class  2------------------------- 
+:PATIENT rdf:type owl:Class; 
+         rdfs:label "PATIENT"@en . 
+#  --------------------------- Class  3------------------------- 
+:JHON rdf:type owl:Class; 
+      rdfs:label "JHON"@en . 
+#  --------------------------- Class  4------------------------- 
+:MEDICAL_ rdf:type owl:Class; 
+          rdfs:label "MEDICAL RECORD 123"@en . 
+#  --------------------------- Class  5------------------------- 
+:MEDICAL_RECORD rdf:type owl:Class; 
+                rdfs:label "MEDICAL RECORD"@en . 
+#  --------------------------- Class  6------------------------- 
+:HYPERTENTION rdf:type owl:Class; 
+              rdfs:label "HYPERTENTION"@en . 
+#  --------------------------- Class  7------------------------- 
+:TREATMENT_789 rdf:type owl:Class; 
+               rdfs:label "TREATMENT 789"@en . 
+#  --------------------------- Class  8------------------------- 
+:BLOOD_PRESSSURE_MANAGEMENT rdf:type owl:Class; 
+                            rdfs:label "BLOOD PRESSSURE MANAGEMENT"@en . 
+#  --------------------------- Class  9------------------------- 
+:PRESCRIBED_MEDICATIONS_AND_LIFE_STYLE_CHANGES_ rdf:type owl:Class; 
+                                                rdfs:label "PRESCRIBED MEDICATIONS AND LIFE STYLE CHANGES "@en . 
+#  --------------------------- Class  10------------------------- 
+:DOCTOR rdf:type owl:Class; 
+        rdfs:label "DOCTOR"@en . 
+#  --------------------------- Class  11------------------------- 
+:DR._SMITH rdf:type owl:Class; 
+           rdfs:label "DR. SMITH"@en . 
+#  --------------------------- Class  12------------------------- 
+:HOSPITAL_XYZ rdf:type owl:Class; 
+              rdfs:label "HOSPITAL XYZ"@en . 
+#  --------------------------- Class  13------------------------- 
+:HOSPITAL rdf:type owl:Class; 
+          rdfs:label "HOSPITAL"@en . 
+#  --------------------------- Class  14------------------------- 
+: rdf:type owl:Class; 
+  rdfs:label "GENERAL HOSPITAL "@en . 
+#  --------------------------- Class  15------------------------- 
+:"CITY_,_COUNTRY" rdf:type owl:Class; 
+                  rdfs:label ""CITY , COUNTRY""@en . 
+#  --------------------------- Class  16------------------------- 
+:INSURANCE_COMPANY_ABC rdf:type owl:Class; 
+                       rdfs:label "INSURANCE COMPANY ABC"@en . 
+#  --------------------------- Class  17------------------------- 
+:INSURANCE_COMPANY rdf:type owl:Class; 
+                   rdfs:label "INSURANCE COMPANY"@en . 
+#  --------------------------- Class  18------------------------- 
+:"HEALTH_INSUTE_LTD." rdf:type owl:Class; 
+                      rdfs:label ""HEALTH INSUTE LTD.""@en . 
+#  --------------------------- Class  19------------------------- 
+:COMPREHENSIVE rdf:type owl:Class; 
+               rdfs:label "COMPREHENSIVE"@en . 
+#  --------------------------- Class  20------------------------- 
+:TREATMENT rdf:type owl:Class; 
+           rdfs:label "TREATMENT"@en . 
